@@ -1,0 +1,883 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,700;1,400&display=swap');
+
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+    --primary-color: #333;
+    --accent-color: #77bd1e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 70px;
+    line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+    color: var(--accent-color);
+}
+
+h1 {
+    font-size: 48px;
+    padding-bottom: 25px;
+}
+
+h2 {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+h5 {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+h6 {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+p {
+    padding-bottom: 30px;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 75px;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    box-shadow: 3px 0 5px var(--primary-color);
+    z-index: 100;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 0 15px;
+}
+
+header li a {
+    color: #f2f2f2;
+    font-weight: 700;
+    transition: color 0.25s ease-in-out;
+    padding-bottom: 10px;
+}
+
+header li a:hover {
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+header li a.nav-active {
+    color: var(--accent-color);
+}
+
+.header_cta a {
+    display: inline-block;
+    color: #f2f2f2;
+    padding: 15px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+.header_cta a:hover {
+    border: 1px solid var(--accent-color);
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.header_cta a i {
+    padding-right: 7px;
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 2px var(--primary-color);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.button-accent {
+    background-color: var(--accent-color);
+}
+
+.button-accent:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.button-accent-transparent {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.button-accent-transparent:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.button-secondary {
+    background-color: var(--primary-color);
+}
+
+.button-secondary:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button-secondary-transparent {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button-secondary-transparent:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.button i {
+    font-size: 20px;
+    padding-left: 7px;
+}
+
+.pocetna_hero-banner {
+    background-image: url('../res/images/Početna_Hero-Banner_BG_1920x1080px.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 704px;
+    position: relative;
+}
+
+.pocetna_hero-banner::before {
+    content: '';
+    height: 256px;
+    width: 1024px;
+    display: block;
+    background-color: var(--accent-color);
+    position: absolute;
+    right: -17px;
+    top: -256px;
+    transform: rotateZ(15deg) skewX(15deg);
+}
+
+.pocetna_hero-banner_container {
+    padding: 0 50px;
+}
+
+.pocetna_hero-banner_inner {
+    padding: 15% 30px;
+}
+
+.pocetna_hero-banner_inner h4 {
+    color: #fff;
+    background-color: var(--accent-color);
+    display: inline-block;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.pocetna_hero-banner_inner h1 {
+    color: var(--primary-color);
+}
+
+.pocetna_hero-banner_inner h1 span {
+    color: var(--accent-color);
+}
+
+.pocetna_hero-banner_inner p {
+    font-weight: 700;
+}
+
+.pocetna_hero-banner_buttons {
+    margin-top: 15px;
+}
+
+.pocetna_hero-banner_buttons a:first-child {
+    margin-right: 15px;
+}
+
+.hero-banner_cards {
+    position: absolute;
+    bottom: -225px;
+    right: 0;
+    left: 0;
+}
+
+.hero-banner_cards_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hero-banner_card {
+    position: relative;
+    width: 24vw;
+    height: 350px;
+    margin: 0 25px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+    border-radius: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 20px var(--primary-color);
+}
+
+.hero-banner_card:hover {
+    transform: scale(1.1);
+    background-color: #f2f2f2;
+    border: 2px solid var(--accent-color);
+}
+
+.hero-banner_card img {
+    width: 128px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.hero-banner_card h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-banner_card a {
+    background-color: var(--accent-color);
+    padding: 16px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    left: calc(12vw - 25px);
+    transition: all 0.25s ease-in-out;
+}
+
+.hero-banner_card a:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+}
+
+.hero-banner_card a i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.pocetna_benefits {
+    background-color: var(--primary-color);
+    padding-bottom: 75px;
+}
+
+.pocetna_benefits::before {
+    content: "";
+    width: 600px;
+    height: 368px;
+    right: 0;
+    margin-top: -40px;
+    background-color: var(--primary-color);
+    display: block;
+    transform: rotateZ(15deg) skewX(15deg) translateX(-25px) translateY(-65px);
+    z-index: -1;
+}
+
+.pocetna_benefits_inner {
+    padding-top: 50px;
+}
+
+.pocetna_benefits_info div {
+    padding: 10px 30px;
+}
+
+.pocetna_benefits_info h2 {
+    color: #fff;
+}
+
+.pocetna_benefits_info p {
+    color: #fff;
+}
+
+.pocetna_benefits_cards {
+    margin-top: 75px;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+}
+
+.pocetna_benefits_cards_inner {
+    justify-content: space-between;
+}
+
+.pocetna_benefits_card {
+    text-align: center;
+    padding: 25px 15px 0;
+    border: 1px solid rgba(50, 168, 82, 0.6);
+    border-radius: 3px;
+    width: 18%;
+    transition: all 0.25s ease-in-out;
+}
+
+.pocetna_benefits_card:hover {
+    background-color: #555;
+}
+
+.pocetna_benefits_card img {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.pocetna_benefits_card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pocetna_benefits_card h5 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.pocetna_benefits_card p {
+    color: #fff;
+}
+
+.pocetna_benefits div.center {
+    margin-top: 75px;
+}
+
+.pocetna_benefits_bottom-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.pocetna_benefits_bottom-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+.pocetna_benefits_bottom-divider .shape-fill {
+    fill: #333333;
+}
+
+/** Za mobilne uređaje **/
+@media (max-width: 767px) {
+    .pocetna_benefits_bottom-divider svg {
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+}
+
+.pocetna_reviews {
+    background-color: #fff;
+    position: relative;
+    padding: 75px 0 0;
+}
+
+.pocetna_reviews_inner {
+    padding-top: 75px;
+}
+
+.pocetna_reviews_info {
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pocetna_reviews_info h5 {
+    color: var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.pocetna_reviews_info h2 {
+    margin-bottom: 25px;
+}
+
+.pocetna_reviews_info hr {
+    width: 25%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pocetna_reviews_reviews {
+    margin-top: 75px;
+}
+
+.pocetna_reviews_reviews_inner {
+    grid-template-columns: 60% 40%;
+}
+
+.pocetna_reviews_cards {
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.pocetna_reviews_card {
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    padding-right: 60px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px var(--primary-color);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.pocetna_reviews_card:hover {
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.33);
+    transform: scale(1.05);
+}
+
+.pocetna_reviews_cards .card-right {
+    margin-left: 50px;
+}
+
+.pocetna_reviews_card_stars span {
+    color: #e6b819;
+}
+
+.pocetna_reviews_card p {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.pocetna_reviews_card h4 {
+    font-weight: 700;
+}
+
+.pocetna_reviews_card a {
+    background-color: var(--accent-color);
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: 3px solid var(--accent-color);
+    color: #fff;
+    position: absolute;
+    right: -75px;
+    bottom: calc(50% - 25px);
+    transition: all 0.5s ease-in-out;
+}
+
+.pocetna_reviews_card a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.pocetna_reviews_card a i {
+    padding-left: 7px;
+    font-size: 20px;
+}
+
+.pocetna_reviews_img {
+    position: relative;
+}
+
+.pocetna_reviews_img img {
+    height: 640px;
+    position: absolute;
+    bottom: 0;
+}
+
+.pocetna_reviews_view-all {
+    background-color: var(--accent-color);
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pocetna_stats_top-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 9;
+}
+
+.pocetna_stats_top-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.pocetna_stats_top-divider .shape-fill {
+    fill: var(--accent-color);
+}
+
+.pocetna_stats {
+    position: relative;
+    background-image: url("../res/images/Početna_Brojač_Pozadina_1920x1080px.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 75px;
+}
+
+.pocetna_stats_bg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.85);
+}
+
+.pocetna_stats_inner {
+    padding: 50px 0;
+}
+
+.pocetna_stats_info {
+    text-align: center;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pocetna_stats_info h5 {
+    color: #fff;
+}
+
+.pocetna_stats_info hr {
+    display: block;
+    width: 25%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pocetna_stats_counters {
+    padding: 75px 0;
+}
+
+.pocetna_stats_counters_inner {
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.pocetna_stats_counter {
+    text-align: center;
+    padding: 30px;
+    width: 20%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(120, 189, 30, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.pocetna_stats_counter:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(120, 189, 30, 0.2);
+}
+
+.pocetna_stats_counter h2 {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(51, 51, 51, 1);
+    border-radius: 25px;
+    padding: 5px 25px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.pocetna_stats_counter h2::after {
+    content: '+';
+    color: #fff;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    position: absolute;
+    right: -20px;
+    top: -15px;
+}
+
+.pocetna_stats_counter hr {
+    display: block;
+    width: 25%;
+    border-width: 2px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pocetna_stats_counter p {
+    color: #fff;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 0;
+}
+
+.stats_bottom-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.stats_bottom-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.stats_bottom-divider .shape-fill {
+    fill: var(--primary-color);
+}
+
+/** Za mobilne uređaje **/
+@media (max-width: 767px) {
+    .stats_bottom-divider svg {
+        width: calc(100% + 1.3px);
+        height: 30px;
+    }
+}
+
+footer {
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.footer_cta {
+    padding-bottom: 15px;
+}
+
+.footer_cta_inner {
+    justify-content: space-evenly;
+}
+
+.footer_cta_item {
+    text-align: center;
+    width: 30%;
+    padding: 25px;
+}
+
+.footer_cta_item i {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 2px 2px var(--accent-color);
+}
+
+.footer_cta_item i:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    transform: scale(0.9);
+    box-shadow: 0 2px 5px var(--accent-color);
+}
+
+.footer_cta_item p {
+    color: #fff;
+    padding-bottom: 0;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.footer_info {
+    padding: 50px 0;
+}
+
+.footer_info_inner {
+    grid-template-columns: repeat(3, 33.33%);
+}
+
+.footer_info_inner h5 span {
+    color: #fff;
+}
+
+.footer_info_inner h5 {
+    padding-bottom: 20px;
+}
+
+.footer_info_inner p {
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.footer_info_contact p i {
+    font-size: 20px;
+    padding-right: 7px;
+    color: var(--accent-color);
+}
+
+.footer_info_contact p.footer_info_working-hours > strong {
+    color: var(--accent-color);
+    font-size: 18px;
+}
+
+.footer_info_contact p.footer_info_working-hours span span {
+    padding-left: 7px;
+} 
+
+.footer_info_links ul {
+    line-height: 1.8;
+}
+
+.footer_info_links ul ul {
+    line-height: 1.6;
+}
+
+.footer_info_links ul, .footer_info_links ul ul {
+    list-style-type: none;
+}
+
+.footer_info_links ul ul li a::before {
+    content: '>';
+    color: var(--accent-color);
+    position: absolute;
+    left: -15px;
+}
+
+.footer_info_links ul li {
+    padding: 5px 0;
+}
+
+.footer_info_links ul li a {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.footer_info_links ul ul li a {
+    color: #fff;
+    margin-left: 30px;
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+}
+
+.footer_info_links:last-child hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    display: block;
+    position: relative;
+    width: 80%;
+    margin: 25px auto;
+}
+
+.footer_info_social {
+    justify-content: center;
+}
+
+.footer_info_social p a {
+    color: var(--accent-color);
+    font-size: 32px;
+    padding: 0 10px;
+}
+
+.footer_copyright {
+    padding: 15px 0;
+    background-color: #222;
+}
+
+.footer_copyright p {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding-bottom: 0;
+}
+
+.footer_copyright p a {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.footer_copyright_divider {
+    position: relative;
+}
+
+.footer_copyright_divider_inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer_copyright_divider_inner svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.footer_copyright_divider_inner .shape-fill {
+    fill: #222222;
+}
