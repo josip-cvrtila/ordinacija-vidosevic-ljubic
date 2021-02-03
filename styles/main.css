@@ -133,7 +133,7 @@ a {
 }
 
 .pocetna_hero-banner {
-    background-image: url('../res/images/Početna_Hero-Banner_BG_1920x1080px.jpg');
+    background-image: url('https://cdn.shopify.com/s/files/1/0521/6754/0913/files/Pocetna_Hero-Banner_BG_1920x1080px.jpg?v=1612302144');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -510,7 +510,7 @@ a {
 
 .pocetna_stats {
     position: relative;
-    background-image: url("../res/images/Početna_Brojač_Pozadina_1920x1080px.jpg");
+    background-image: url("https://cdn.shopify.com/s/files/1/0521/6754/0913/files/Pocetna_Brojac_Pozadina_1920x1080px.jpg?v=1612302144");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
