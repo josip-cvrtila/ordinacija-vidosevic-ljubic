@@ -68,67 +68,6 @@ a {
     font-size: 16px;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 75px;
-    background-color: var(--primary-color);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 70px;
-    box-shadow: 3px 0 5px var(--primary-color);
-    z-index: 100;
-}
-
-header * {
-    display: inline;
-}
-
-header li {
-    margin: 0 15px;
-}
-
-header li a {
-    color: #f2f2f2;
-    font-weight: 700;
-    transition: color 0.25s ease-in-out;
-    padding-bottom: 10px;
-}
-
-header li a:hover {
-    color: var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
-}
-
-header li a.nav-active {
-    color: var(--accent-color);
-}
-
-.header_cta a {
-    display: inline-block;
-    color: #f2f2f2;
-    padding: 15px 10px;
-    margin: 0 5px;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
-    font-size: 14px;
-}
-
-.header_cta a:hover {
-    border: 1px solid var(--accent-color);
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-.header_cta a i {
-    padding-right: 7px;
-    font-size: 18px;
-    color: var(--accent-color);
-}
-
 .button {
     display: inline-block;
     padding: 15px 25px;
@@ -194,13 +133,14 @@ header li a.nav-active {
 }
 
 .pocetna_hero-banner {
-    background-image: url('https://cdn.shopify.com/s/files/1/0521/6754/0913/files/Pocetna_Hero-Banner_BG_1920x1080px.jpg?v=1612302144');
+    background-image: url('../res/images/Početna_Hero-Banner_BG_1920x1080px.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 704px;
     position: relative;
 }
+
 
 .pocetna_hero-banner::before {
     content: '';
@@ -271,7 +211,7 @@ header li a.nav-active {
     padding: 25px;
     text-align: center;
     transition: all 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 99;
     border-radius: 10px;
     border-bottom-right-radius: 35px;
     border-bottom-left-radius: 35px;
@@ -570,7 +510,7 @@ header li a.nav-active {
 
 .pocetna_stats {
     position: relative;
-    background-image: url("https://cdn.shopify.com/s/files/1/0521/6754/0913/files/Pocetna_Brojac_Pozadina_1920x1080px.jpg?v=1612302144");
+    background-image: url("../res/images/Početna_Brojač_Pozadina_1920x1080px.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -703,165 +643,57 @@ header li a.nav-active {
     }
 }
 
-footer {
+/* KONTAKT - STRANICA */
+
+.kontakt_hero-banner {
     position: relative;
-    background-color: var(--primary-color);
-}
-
-.footer_cta {
-    padding-bottom: 15px;
-}
-
-.footer_cta_inner {
-    justify-content: space-evenly;
-}
-
-.footer_cta_item {
-    text-align: center;
-    width: 30%;
-    padding: 25px;
-}
-
-.footer_cta_item i {
-    padding: 15px;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    font-size: 28px;
-    color: #fff;
-    margin-bottom: 15px;
-    transition: all 0.25s ease-in-out;
-    box-shadow: 0 2px 2px var(--accent-color);
-}
-
-.footer_cta_item i:hover {
-    background-color: var(--primary-color);
-    border: 2px solid var(--accent-color);
-    transform: scale(0.9);
-    box-shadow: 0 2px 5px var(--accent-color);
-}
-
-.footer_cta_item p {
-    color: #fff;
-    padding-bottom: 0;
-}
-
-footer hr {
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.footer_info {
-    padding: 50px 0;
-}
-
-.footer_info_inner {
-    grid-template-columns: repeat(3, 33.33%);
-}
-
-.footer_info_inner h5 span {
-    color: #fff;
-}
-
-.footer_info_inner h5 {
-    padding-bottom: 20px;
-}
-
-.footer_info_inner p {
-    color: #fff;
-    padding-bottom: 20px;
-}
-
-.footer_info_contact p i {
-    font-size: 20px;
-    padding-right: 7px;
-    color: var(--accent-color);
-}
-
-.footer_info_contact p.footer_info_working-hours > strong {
-    color: var(--accent-color);
-    font-size: 18px;
-}
-
-.footer_info_contact p.footer_info_working-hours span span {
-    padding-left: 7px;
-} 
-
-.footer_info_links ul {
-    line-height: 1.8;
-}
-
-.footer_info_links ul ul {
-    line-height: 1.6;
-}
-
-.footer_info_links ul, .footer_info_links ul ul {
-    list-style-type: none;
-}
-
-.footer_info_links ul ul li a::before {
-    content: '>';
-    color: var(--accent-color);
-    position: absolute;
-    left: -15px;
-}
-
-.footer_info_links ul li {
-    padding: 5px 0;
-}
-
-.footer_info_links ul li a {
-    color: var(--accent-color);
-    font-size: 18px;
-    font-weight: 700;
-    padding: 5px 0;
-}
-
-.footer_info_links ul ul li a {
-    color: #fff;
-    margin-left: 30px;
-    font-weight: 400;
-    position: relative;
-    font-size: 16px;
-}
-
-.footer_info_links:last-child hr {
-    border-color: rgba(255, 255, 255, 0.1);
-    display: block;
-    position: relative;
-    width: 80%;
-    margin: 25px auto;
-}
-
-.footer_info_social {
+    background-image: url("../res/images/Kontakt_Hero-Banner_BG_1920x1080px.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     justify-content: center;
+    align-items: center;
 }
 
-.footer_info_social p a {
-    color: var(--accent-color);
-    font-size: 32px;
-    padding: 0 10px;
+.kontakt_hero-banner_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.5);
 }
 
-.footer_copyright {
-    padding: 15px 0;
-    background-color: #222;
+.kontakt_hero-banner_inner {
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
 }
 
-.footer_copyright p {
-    color: #f2f2f2;
-    font-size: 14px;
-    padding-bottom: 0;
+.kontakt_hero-banner_inner h1 {
+    border: 3px solid #fff;
+    padding: 15px 25px;
+    display: inline-block;
+    margin-bottom: 25px;
+    background-color: rgba(51, 51, 51, 0.33);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
-.footer_copyright p a {
-    color: var(--accent-color);
-    font-weight: 700;
+.kontakt_hero-banner_inner p {
+    color: #fff;
 }
 
-.footer_copyright_divider {
+.kontakt_hero-banner_bottom-divider {
     position: relative;
 }
 
-.footer_copyright_divider_inner {
+.kontakt_hero-banner_bottom-divider_inner {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -871,13 +703,256 @@ footer hr {
     transform: rotate(180deg);
 }
 
-.footer_copyright_divider_inner svg {
+.kontakt_hero-banner_bottom-divider_inner svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 100px;
+    height: 50px;
 }
 
-.footer_copyright_divider_inner .shape-fill {
-    fill: #222222;
+.kontakt_hero-banner_bottom-divider_inner .shape-fill {
+    fill: #333333;
+}
+
+.kontakt_info {
+    padding: 75px 0;
+    background-color: var(--primary-color);
+}
+
+.kontakt_info_inner {
+    grid-template-columns: 70% 30%;
+}
+
+.kontakt_info_cta {
+    text-align: center;
+}
+
+.kontakt_info_cta > h3 {
+    padding-bottom: 50px;
+    color: #fff;
+}
+
+.kontakt_info_cta_inner {
+    justify-content: space-evenly;
+}
+
+.kontakt_info_cta_item {
+    padding: 25px;
+    width: 30%;
+    transition: all 0.5s ease-in-out;
+}
+
+.kontakt_info_cta_item:hover {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.33);
+    cursor: pointer;
+}
+
+.kontakt_info_cta_item i {
+    font-size: 32px;
+    padding-bottom: 25px;
+    color: var(--accent-color);
+}
+
+.kontakt_info_cta_item a {
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+
+.kontakt_info_radno-vrijeme {
+    padding-left: 50px;
+}
+
+.kontakt_info_radno-vrijeme h3 {
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.kontakt_info_radno-vrijeme h3, .kontakt_info_cta h3 {
+    padding-bottom: 25px;
+}
+
+.kontakt_info_radno-vrijeme h3 i, .kontakt_info_cta h3 i {
+    font-size: 38px;
+    color: var(--accent-color);
+    padding-right: 10px;
+}
+
+.kontakt_info_cta hr, .kontakt_info_radno-vrijeme hr {
+    display: block;
+    border-color: rgba(255, 255, 255, 0.2);
+    width: 20%;
+    position: relative;
+    margin: 0 auto 30px;
+}
+
+.kontakt_info_radno-vrijeme p {
+    color: #fff;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.kontakt_info_radno-vrijeme p strong {
+    color: var(--accent-color);
+    padding-right: 10px;
+}
+
+.kontakt_form {
+    padding: 0;
+}
+
+.kontakt_form_top-divider {
+    position: relative;
+}
+
+.kontakt_form_top-divider_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.kontakt_form_top-divider_inner svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.kontakt_form_top-divider_inner .shape-fill {
+    fill: #333333;
+}
+
+.kontakt_form_wrapper {
+    grid-template-columns: 40% 60%;
+}
+
+.kontakt_form_inner {
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    width: 100%;
+}
+
+.kontakt_form_info {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+form {
+    width: 100%;
+}
+
+.kontakt_form_inner input, .kontakt_form_inner textarea {
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    margin: 25px 0;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+    color: var(--primary-color);
+    font-size: 18px;
+    font-family: var(--primary-font);
+}
+
+.form-control::placeholder {
+    color: var(--accent-color);
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+
+.form-control:focus {
+    outline: 2px dotted var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+.form-control:focus::placeholder {
+    color: #fff;
+}
+
+.kontakt_form textarea {
+    height: 150px;
+}
+
+.kontakt_form textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+.kontakt_form textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #77bd1ed3;
+}
+
+.kontakt_form textarea::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  outline: 1px solid slategrey;
+}
+
+.kontakt_form_inner {
+    padding: 75px 30px;
+}
+
+.kontakt_form_inner a {
+    margin-top: 25px;
+}
+
+.kontakt_form .map_wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    position: relative;
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.77);
+}
+
+.kontakt_form .map_wrapper i {
+    position: absolute;
+    top: 42%;
+    right: 47%;
+    font-size: 48px;
+    color: #ff0000;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    box-shadow: 3 2px 3px rgba(51, 51, 51, 0.2);
+    z-index: 1;
+}
+
+.kontakt_form .map {
+    width: 100%;
+    height: 100%;
+}
+
+.kontakt_form_bottom-divider {
+    position: relative;
+}
+
+.kontakt_form_bottom-divider_inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.kontakt_form_bottom-divider_inner svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.kontakt_form_bottom-divider_inner .shape-fill {
+    fill: #333333;
 }
