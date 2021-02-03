@@ -1,8 +1,3 @@
-:root {
-    --primary-font: 'Montserrat', sans-serif;
-    --secondary-font: 'Poppins', sans-serif;
-}
-
 .container {
     width: 90%;
     position: relative;
@@ -36,3 +31,15 @@
 .center {
     text-align: center;
 }
+
+.tooltip::after {
+    content: 'Test sadržaj';
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 5px;
+    padding: 15px 25px;
+    position: absolute;
+    top: -75px;
+    right: 15px;
+}
+
