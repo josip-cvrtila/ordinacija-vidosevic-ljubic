@@ -32,14 +32,28 @@
     text-align: center;
 }
 
-.tooltip::after {
-    content: 'Test sadržaj';
-    color: var(--primary-color);
-    background-color: rgba(255, 255, 255, 0.33);
-    border-radius: 5px;
-    padding: 15px 25px;
-    position: absolute;
-    top: -75px;
-    right: 15px;
+.hidden {
+    display: none;
 }
 
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.tooltip:hover::after {
+    content: attr(data-info);
+    display: block;
+    position: absolute;
+    top: -200px;
+    right: -50px;
+    font-size: 24px;
+    background-color: var(--primary-color);
+    font-weight: 700;
+    color: #fff;
+    height: 200px;
+    width: 300px;
+}
