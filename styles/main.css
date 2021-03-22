@@ -63,6 +63,10 @@ p {
     color: var(--primary-color);
 }
 
+p strong {
+    color: var(--accent-color);
+}
+
 a {
     text-decoration: none;
     font-family: var(--primary-font);
